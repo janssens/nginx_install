@@ -73,7 +73,7 @@ echo "- Create symlink"
 ln -s /etc/nginx/sites-available/$SITE_URL.conf /etc/nginx/sites-enabled/
 
 
-if [ $EXTRA_CONF - a -f $EXTRA_CONF ]; then
+if [ -f $EXTRA_CONF ]; then
   echo "- Copy EXTRA_CONF"
   cp $EXTRA_CONF /etc/nginx/snippets/$SITE_URL.extra.conf
 fi
