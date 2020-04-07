@@ -17,7 +17,7 @@ if [ ! -w "/etc/nginx/sites-available/" ]; then
 fi
 
 SITE_URL_FROM_PARAMS=${SITE_URL_FROM_PARAMS:-wordpress.local}
-read -p "Enter the local site url [$SITE_URL_FROM_PARAMS]: " SITE_URL
+read -p "Enter the local site domain [$SITE_URL_FROM_PARAMS]: " SITE_URL
 SITE_URL=${SITE_URL:-$SITE_URL_FROM_PARAMS}
 
 echo "SITE_URL : $SITE_URL"
@@ -29,7 +29,7 @@ WEB_ROOT_PATH=${WEB_ROOT_PATH:-$WEB_ROOT_PATH_FROM_PARAMS}
 echo "WEB_ROOT_PATH : $WEB_ROOT_PATH"
 
 CMS_NAME_FROM_PARAMS=${CMS_NAME_FROM_PARAMS:-wordpress}
-read -p "Enter the name of the cms (wordpress,magento,symfony) [$CMS_NAME_FROM_PARAMS]: " CMS_NAME
+read -p "Enter the name of the cms (wordpress,magento,symfony,grav) [$CMS_NAME_FROM_PARAMS]: " CMS_NAME
 CMS_NAME=${CMS_NAME:-$CMS_NAME_FROM_PARAMS}
 
 echo "CMS_NAME : $CMS_NAME"
