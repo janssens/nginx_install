@@ -83,7 +83,7 @@ echo "B) install site in /etc/hosts"
 echo "remove old lines"
 sed -i "/$SITE_URL/d" /etc/hosts
 echo "add new ones"
-echo "127.0.0.1  $SITE_URL" >> /etc/hosts
+echo "127.0.0.1 ::1 $SITE_URL" >> /etc/hosts
 
 echo "C) test conf and restart nginx"
 
